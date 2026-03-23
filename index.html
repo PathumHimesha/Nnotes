@@ -504,6 +504,40 @@
             </div>
         </div>
 
+        <div id="view-browse" class="hidden">
+            <div style="display: flex; align-items: center; gap: 1rem; margin: 2rem 0;">
+                <button class="btn btn-outline" onclick="switchView('home')" style="padding: 0.5rem 1rem; border-radius: 50%; width: 45px; height: 45px; display: flex; align-items: center; justify-content: center; font-size: 1.2rem; border-width: 2px;" title="Back"><i class="fa-solid fa-arrow-left"></i></button>
+                <h2 style="font-size:2.8rem; font-weight: 800; margin: 0;">📚 full library</h2>
+            </div>
+            <div class="filter-container">
+                <input type="text" id="searchBar" class="filter-input" placeholder="🔍 Search subject, title, or author..." style="flex: 1;">
+                
+                <select id="filterFaculty" class="filter-input" style="flex: 0.5;">
+                    <option value="All">🏢 All Faculties</option>
+                    <option value="Faculty of Business">Faculty of Business</option>
+                    <option value="Faculty of Computing">Faculty of Computing</option>
+                    <option value="Faculty of Engineering">Faculty of Engineering</option>
+                    <option value="Faculty of Science">Faculty of Science</option>
+                </select>
+
+                <select id="filterUni" class="filter-input" style="flex: 0.5;">
+                    <option value="All">🏫 All Universities</option>
+                    <option value="UGC">UGC Approved (NSBM)</option>
+                    <option value="Plymouth">University of Plymouth</option>
+                    <option value="Victoria">Victoria University</option>
+                </select>
+                
+                <select id="filterYear" class="filter-input" style="flex: 0.5;">
+                    <option value="All">📅 All Years</option>
+                    <option value="Year 1">Year 1</option>
+                    <option value="Year 2">Year 2</option>
+                    <option value="Year 3">Year 3</option>
+                    <option value="Year 4">Year 4</option>
+                </select>
+            </div>
+            <div class="notes-grid" id="browse-container"></div>
+        </div>
+
         <div id="view-upload" class="hidden">
             <div style="max-width:720px; margin:3rem auto; background:var(--bg-card); border-radius:40px; padding:4rem; border:3px solid var(--primary-light); position: relative;">
                 <h2 style="font-weight:800; font-size:2.8rem; text-align: center; margin-top: 1rem;">🚀 share & shine</h2>
