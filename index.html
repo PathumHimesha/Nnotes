@@ -559,6 +559,40 @@
             <div class="mod-grid" id="moderation-container"></div>
         </div>
 
+        <div id="view-admin" class="hidden">
+            <div style="display: flex; align-items: center; gap: 1rem; margin: 2rem 0;">
+                <button class="btn btn-outline" onclick="switchView('home')" style="padding: 0.5rem 1rem; border-radius: 50%; width: 45px; height: 45px; display: flex; align-items: center; justify-content: center; font-size: 1.2rem; border-width: 2px;" title="Back"><i class="fa-solid fa-arrow-left"></i></button>
+                <h2 style="font-size:2.8rem; font-weight: 800; margin: 0;">⚙️ Admin Dashboard</h2>
+            </div>
+            <div class="admin-grid">
+                <div class="admin-panel">
+                    <h3 style="margin-bottom: 1.5rem;"><i class="fa-solid fa-user-plus"></i> Add New Lecturer</h3>
+                    <form id="addLecturerForm">
+                        <input type="text" name="full_name" class="input-field" placeholder="Dr. Full Name" required>
+                        <input type="email" name="email" class="input-field" placeholder="Lecturer Email (@nsbm.ac.lk)" required>
+                        <input type="password" name="password" class="input-field" placeholder="Temporary Password" required>
+                        
+                        <select name="faculty" class="input-field" required>
+                            <option value="">Select Faculty Assignment...</option>
+                            <option value="Faculty of Business">Faculty of Business</option>
+                            <option value="Faculty of Computing">Faculty of Computing</option>
+                            <option value="Faculty of Engineering">Faculty of Engineering</option>
+                            <option value="Faculty of Science">Faculty of Science</option>
+                        </select>
+
+                        <select name="university" class="input-field" required>
+                            <option value="">Select Primary University...</option>
+                            <option value="Plymouth">Plymouth University</option>
+                            <option value="UGC">UGC Program</option>
+                            <option value="Victoria">Victoria University</option>
+                        </select>
+
+                        <button type="submit" class="btn btn-primary" style="width:100%;">Create Account</button>
+                        <div id="lecMessage" style="margin-top: 10px; font-weight: bold;"></div>
+                    </form>
+                </div>
+            </div>
+        </div>
         <div id="view-profile" class="hidden">
             <div style="max-width:500px; margin:3rem auto; background:var(--bg-card); border-radius:40px; padding:3rem; border: 3px solid var(--primary-light); position: relative; box-shadow: 0 10px 30px var(--shadow-color);">
                 <button class="btn btn-outline" onclick="switchView('home')" style="position: absolute; top: 1.5rem; left: 1.5rem; width: 45px; height: 45px; padding: 0; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.2rem; border-width: 2px;" title="Back"><i class="fa-solid fa-arrow-left"></i></button>
