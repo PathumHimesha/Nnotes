@@ -1,10 +1,10 @@
 <?php
-// get_notes.php
+
 header('Content-Type: application/json');
 require_once 'config.php';
 
 try {
-    // FIXED SQL: Now selecting n.faculty so the filters can see it!
+    
     $sql = "SELECT 
                 n.note_id, 
                 n.title, 
@@ -34,7 +34,7 @@ try {
     
     $notes = $stmt->fetchAll(PDO::FETCH_ASSOC);
     
-    // Send the data back to the frontend as JSON
+    
     echo json_encode(["status" => "success", "data" => $notes]);
 
 } catch(PDOException $e) {
